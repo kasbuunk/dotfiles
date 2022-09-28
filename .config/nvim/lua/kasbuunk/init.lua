@@ -1,0 +1,8 @@
+require('kasbuunk.plugins')
+require('kasbuunk.telescope')
+require('kasbuunk.lightline')
+require('kasbuunk.gitsigns')
+require('kasbuunk.lsp')
+require('kasbuunk.treesitter')
+require('kasbuunk.nvim-tree')
+require('kasbuunk.startup')
