@@ -18,6 +18,7 @@ set relativenumber
 set signcolumn=number
 set nowrap
 set ruler
+set cursorline
 set noshowmode
 " set mouse=a
 set colorcolumn=80
@@ -58,7 +59,7 @@ syntax on
 syntax enable
 "
 " Visualize tabs and newlines
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,space:·
 " Uncomment this to enable by default:
 set list " To enable by default
 " Or use your leader key + l to toggle on/off
@@ -69,3 +70,5 @@ if (has("termguicolors"))
 endif
 colorscheme gruvbox
 
+autocmd BufWritePre *.go lua OrgImports(1000)
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
